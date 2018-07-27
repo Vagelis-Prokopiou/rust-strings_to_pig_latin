@@ -6,8 +6,8 @@ Keep in mind the details about UTF-8 encoding!
 */
 
 pub fn strings_to_pig_latin(word: &str) -> String {
-    let vowels  = ["a", "e", "i", "o", "u", "y"];
-    let first_char = &word[0..1];
+    let vowels: [&str; 6] = ["a", "e", "i", "o", "u", "y"];
+    let first_char: &str = &word[0..1];
     let mut is_vowel: bool = false;
 
     for char in vowels.iter() {
@@ -20,7 +20,7 @@ pub fn strings_to_pig_latin(word: &str) -> String {
     if is_vowel {
         return word.to_string() + "-hay";
     }
-    
+
     return word[1..].to_string() + "-" + &first_char + "ay";
 }
 
