@@ -19,9 +19,9 @@ pub fn strings_to_pig_latin(word: &str) -> String {
 
     if is_vowel {
         return word.to_string() + "-hay";
-    } else {
-        return word[1..].to_string() + "-" + &first_char + "ay";
     }
+    
+    return word[1..].to_string() + "-" + &first_char + "ay";
 }
 
 
