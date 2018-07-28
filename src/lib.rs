@@ -11,7 +11,7 @@ pub fn strings_to_pig_latin(word: &str) -> String {
     let mut is_vowel: bool = false;
 
     for char in vowels.iter() {
-        if char.to_ascii_lowercase() == first_char.to_ascii_lowercase()  {
+        if *char == first_char || char.to_ascii_uppercase() == first_char {
             is_vowel = true;
             break;
         }
